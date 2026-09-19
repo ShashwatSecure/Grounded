@@ -96,11 +96,12 @@ class GroqChatModel:
             try:
                 from langchain_core.messages import (
                     AIMessage,
+                    BaseMessage,
                     HumanMessage,
                     SystemMessage,
                 )
 
-                lc_messages = []
+                lc_messages: list[BaseMessage] = []
                 for m in messages:
                     if m.role == "system":
                         lc_messages.append(SystemMessage(content=m.content))
