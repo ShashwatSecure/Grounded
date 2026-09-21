@@ -34,7 +34,7 @@ class Settings(BaseSettings):
     chunk_overlap: int = Field(default=120, alias="CHUNK_OVERLAP", ge=0)
     top_k: int = Field(default=5, alias="TOP_K", gt=0)
     similarity_threshold: float = Field(
-        default=0.45, alias="SIMILARITY_THRESHOLD", ge=0.0, le=1.0
+        default=0.15, alias="SIMILARITY_THRESHOLD", ge=0.0, le=1.0
     )
     max_history_messages: int = Field(default=10, alias="MAX_HISTORY_MESSAGES", gt=0)
     max_input_characters: int = Field(default=8000, alias="MAX_INPUT_CHARACTERS", gt=0)
